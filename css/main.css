@@ -1,20 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
 }
 
+
 html, body{
-    box-sizing: border-box;
+    width: 100%;
+}
+
+.main {
+    width: 80%;
+    margin: 0 auto;
 }
 
 .nav{
-    margin: auto;
-    width: 80%;
-    height: 10vh;
-    background-color: #FF742B;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: auto;
+    /* width: 80%; */
+    height: 10vh;
+    background-color: #FF742B;
 }
 
 .logo-box{
@@ -88,19 +98,24 @@ html, body{
 .result-analysis{
     display: flex;
     justify-content: space-between;
-    margin: 10px auto;
-    width: 80%;
+    align-items: center;
+    padding: 10px;
     background-color: #fdfdfd;
 }
 
 .button-list{
     display: flex;
-    justify-content: space-around;
-    width: 40%;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+
+.button-list button {
+    margin: 0 5px;
 }
 
 .result-analysis-button{
-    height: 25px;
+    cursor: pointer;
+    padding: 5px;
     background-color: #ffffff;
     border: 1px solid #9D9D9D;
     border-radius: 2px;
@@ -109,14 +124,12 @@ html, body{
 
 .fa-share-alt{
     cursor: pointer;
-    margin-right: 30px;
+    margin-right: 10px;
     color: #9D9D9D;
 }
 
-
 .content{
     margin: auto;
-    width: 80%;
 }
 
 .articles{
@@ -127,8 +140,8 @@ html, body{
 
 .footer{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 80%;
     margin: 25px auto;
 }
 
@@ -146,7 +159,7 @@ html, body{
 .footer-2{
     display: flex;
     justify-content: center;
-    width: 80%;
+    flex-wrap: wrap;
     margin: 10px auto;
 }
 
@@ -155,3 +168,55 @@ html, body{
     margin: 5px;
 }
 
+@media only screen
+    and (min-width: 768px)
+    and (max-width: 1200px){
+        .main{
+            width: 100%;
+        }
+        .icon i{
+            margin-right: 10px;
+        }
+}
+
+@media only screen
+    and (min-width: 480px)
+    and (max-width: 768px){
+        .main{
+            width: 100%;
+        }
+        .logo-box div{
+            display: none;
+        }
+        .result-analysis i{
+            display: none;
+        }
+    }
+
+@media only screen
+    and (max-width: 480px){
+        .main{
+            width: 100%;
+        }
+        .logo-box div{
+            display: none;
+        }
+        .result-analysis i{
+            display: none;
+        }
+        .algolia-box p{
+            display: none;
+        }
+        .algolia-box img{
+            display: none;
+        }
+        .icon i{
+            margin-right: 10px;
+        }
+        .button-list span{
+            display: none;
+        }
+        .result-analysis div{
+            margin: auto;
+        }
+    }
