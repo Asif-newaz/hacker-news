@@ -53,23 +53,27 @@ html, body{
 
 .search-area-sub{
     display: flex;
+    align-items: center;
     width: 75%;
     background-color: #ffffff;
 }
 
 .search-area i{
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-    margin-left: 5px;
+    align-items: center; */
+    margin: 0 5px;
     color: #FF742B;
 }
 
 .search-area-sub input[type=text]{
-    margin-left: 10px;
+    /* margin-left: 10px; */
     border: 0px solid;
     width: 100%;
-    height: 95%;
+    height: 100%;
+    outline: none;
+    font-size: 16px;
+    line-height: 1;
 }
 
 .algolia-box{
