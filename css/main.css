@@ -216,7 +216,7 @@ html, body{
         .button-list span{
             display: none;
         }
-        .result-analysis div{
-            margin: auto;
+        .result-analysis {
+            justify-content: flex-end;
         }
     }
